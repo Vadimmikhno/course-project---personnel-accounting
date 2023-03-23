@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.warehouse.controller.AdminWarehousesPanelController">
+    <children>
+        <TableView fx:id="warehouseTable" layoutX="651.0" prefHeight="720.0" prefWidth="428.0">
+            <columns>
+                <TableColumn fx:id="idCol" prefWidth="75.0" text="ID" />
+                <TableColumn fx:id="nameCol" prefWidth="156.0" text="Наименование" />
+                <TableColumn fx:id="squarCol" prefWidth="98.0" text="Площадь" />
+                <TableColumn fx:id="employeesCol" prefWidth="101.0" text="Кол-во раб." />
+            </columns>
+        </TableView>
+        <Text layoutX="14.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Информация" wrappingWidth="259.6708984375">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Text>
+        <Text fx:id="numberItems" layoutX="14.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Кол-во товаров на складах:" wrappingWidth="259.670920714736">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+        <Text fx:id="squar" layoutX="14.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Общая площадь:" wrappingWidth="259.670920714736">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+        <Text fx:id="numberEmployees" layoutX="14.0" layoutY="215.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Кол-во работников:" wrappingWidth="259.670920714736">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+        <TextField fx:id="findByNameF" layoutX="295.0" layoutY="102.0" prefHeight="4.0" prefWidth="162.0" />
+        <Line endX="600.0" layoutX="37.0" layoutY="361.0" opacity="0.57" rotate="90.0" startX="-100.0" />
+        <Text layoutX="296.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Поиск по имени" wrappingWidth="140.6708984375" />
+        <Button fx:id="findByNameBtn" layoutX="457.0" layoutY="102.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="88.0" style="-fx-background-color: rgba(0,205,250,0.8);" text="Найти" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Button>
+        <Text layoutX="296.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Добавить склад:" wrappingWidth="155.6708984375" />
+        <Button fx:id="escBtn" layoutX="14.0" layoutY="638.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="88.0" style="-fx-background-color: #DC143C;" text="Назад" textFill="WHITE" />
+        <Button fx:id="deleteBtn" layoutX="296.0" layoutY="16.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="156.0" style="-fx-background-color: rgba(0,205,250,0.8);" text="Удалить" textFill="WHITE" />
+      <Text layoutX="14.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Учет складов" wrappingWidth="259.6708984375">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Text>
+      <TextField fx:id="addNameF" layoutX="295.0" layoutY="204.0" prefHeight="4.0" prefWidth="162.0" />
+      <Text layoutX="295.0" layoutY="198.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Наименование:" wrappingWidth="155.6708984375" />
+      <TextField fx:id="addSquarF" layoutX="296.0" layoutY="267.0" prefHeight="4.0" prefWidth="162.0" />
+      <Text layoutX="296.0" layoutY="261.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Площадь:" wrappingWidth="155.6708984375" />
+      <Button fx:id="addBtn" layoutX="296.0" layoutY="317.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="88.0" style="-fx-background-color: rgba(0,205,250,0.8);" text="Добавить" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="goWarehouse" layoutX="485.0" layoutY="16.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="156.0" style="-fx-background-color: rgba(0,205,250,0.8);" text="Просмотр склада" textFill="WHITE" />
+      <Text layoutX="299.0" layoutY="391.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Изменить:" wrappingWidth="155.6708984375" />
+      <TextField fx:id="updateNameF" layoutX="298.0" layoutY="424.0" prefHeight="4.0" prefWidth="162.0" />
+      <Text layoutX="298.0" layoutY="418.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Наименование:" wrappingWidth="155.6708984375" />
+      <TextField fx:id="updateSquarF" layoutX="299.0" layoutY="487.0" prefHeight="4.0" prefWidth="162.0" />
+      <Text layoutX="299.0" layoutY="481.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Площадь:" wrappingWidth="155.6708984375" />
+      <Button fx:id="updateBtn" layoutX="299.0" layoutY="537.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="88.0" style="-fx-background-color: rgba(0,205,250,0.8);" text="Сохранить" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+    </children>
+</AnchorPane>
